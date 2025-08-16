@@ -14,10 +14,11 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
     // Simulación de login exitoso (puedes agregar lógica real con backend)
     if (username === "admin" && password === "12345") {
-        alert('¡Bienvenido ' + username + '!');
+        alert('¡Bienvenido rata' + username + '!');
         window.location.href = "redes.html";
     } else {
         errorMessage.textContent = 'Nombre de usuario o contraseña incorrectos.';
     }
 });
+
 
