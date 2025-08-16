@@ -1,61 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Mis Redes Sociales</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f3f3f3; }
-        .menu {
-            margin: 50px auto;
-            width: 300px;
-            text-align: center;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropbtn {
-            background-color: #3498db;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            left: 0;
-            background-color: #fff;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-            border-radius: 8px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown-content a:hover { background-color: #f1f1f1 }
-        .dropdown:hover .dropdown-content { display: block; }
-        .dropdown:hover .dropbtn { background-color: #2980b9; }
-    </style>
-</head>
-<body>
-    <div class="menu">
-        <h2>¡Bienvenido! Accede a mis redes sociales:</h2>
-        <div class="dropdown">
-            <button class="dropbtn">Menú Redes Sociales</button>
-            <div class="dropdown-content">
-                <a href="https://www.facebook.com/" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-                <a href="https://twitter.com/" target="_blank">X (Twitter)</a>
-                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-            </div>
-        </div>
-    </div>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const errorMessage = document.getElementById('error-message');
+
+    errorMessage.textContent = '';
+
+    if (!username || !password) {
+        errorMessage.textContent = 'Por favor, complete ambos campos.';
+        return;
+    }
+
+    // Simulación de login exitoso (puedes agregar lógica real con backend)
+    if (username === "admin" && password === "12345") {
+        alert('¡Bienvenido ' + username + '!');
+        // Aquí podrías redirigir o mostrar otra página
+    } else {
+        errorMessage.textContent = 'Nombre de usuario o contraseña incorrectos.';
+    }
+});
 </body>
 </html>
+
