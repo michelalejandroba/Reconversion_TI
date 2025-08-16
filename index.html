@@ -2,22 +2,61 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Mi Página</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login - Reconversion_TI</title>
+    <style>
+        body {
+            background: #f3f3f3;
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+            width: 350px;
+            margin: 100px auto;
+            padding: 30px 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 25px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 10px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        button {
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 18px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .error-msg {
+            color: #c0392b;
+            margin-top: 12px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>Iniciar Sesión</h2>
+        <h2>Acceso al sistema</h2>
         <form id="loginForm">
-            <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-            
+            <input type="text" id="usuario" placeholder="Usuario" required>
+            <input type="password" id="contrasena" placeholder="Contraseña" required>
+            <br>
             <button type="submit">Ingresar</button>
-            <div id="error-message"></div>
+            <div id="errorMsg" class="error-msg"></div>
         </form>
     </div>
     <script src="script.js"></script>
