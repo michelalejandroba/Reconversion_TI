@@ -15,7 +15,9 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // 🔐 Solicitud a ReqRes
     fetch("https://reqres.in/api/login", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json",
+                 "x-api-key": "reqres-free-v1" 
+                 },
         body: JSON.stringify({
             email: username,
             password: password
@@ -36,6 +38,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         errorMessage.textContent = 'Error de conexión con el servidor.';
     });
 });
+
 
 
 
