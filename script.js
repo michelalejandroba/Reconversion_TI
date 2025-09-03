@@ -15,11 +15,12 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // Simulación de login exitoso (puedes agregar lógica real con backend)
     if (username === "admin" && password === "12345") {
         alert('¡hola ' + username + ', será redirigido a sus redes sociales!');
-        //window.location.href = "redes.html";
+        window.location.href = "redes.html";
     } else {
         errorMessage.textContent = 'Nombre de usuario o contraseña incorrectos.';
     }
 });
+
 
 
 
